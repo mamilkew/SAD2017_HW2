@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hw2_revenue_recognition@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.0">
+    <root id="1"/>
+    <database id="2" parent="1" name="hw2_revenue_recognition">
+      <ObjectId>16420</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2017-03-30.00:01:30.411</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1089</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="4" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="5" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="6" parent="2" name="pg_temp_1">
+      <ObjectId>11848</ObjectId>
+    </schema>
+    <schema id="7" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11849</ObjectId>
+    </schema>
+    <schema id="8" parent="2" name="information_schema">
+      <ObjectId>12381</ObjectId>
+    </schema>
+    <table id="9" parent="3" name="contract">
+      <ObjectId>16878</ObjectId>
+      <StateNumber>1089</StateNumber>
+    </table>
+    <table id="10" parent="3" name="product">
+      <ObjectId>16886</ObjectId>
+      <StateNumber>1089</StateNumber>
+    </table>
+    <table id="11" parent="3" name="revenuerecognition">
+      <ObjectId>16894</ObjectId>
+      <StateNumber>1088</StateNumber>
+    </table>
+    <column id="12" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1086</StateNumber>
+    </column>
+    <column id="13" parent="9" name="revenue">
+      <Position>2</Position>
+      <DataType>bytea|0</DataType>
+      <StateNumber>1086</StateNumber>
+    </column>
+    <column id="14" parent="9" name="whensigned">
+      <Position>3</Position>
+      <DataType>bytea|0</DataType>
+      <StateNumber>1086</StateNumber>
+    </column>
+    <column id="15" parent="9" name="product_id">
+      <Position>4</Position>
+      <DataType>bigint|0</DataType>
+      <StateNumber>1086</StateNumber>
+    </column>
+    <index id="16" parent="9" name="contract_pkey">
+      <ObjectId>16884</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="17" parent="9" name="contract_pkey">
+      <ObjectId>16885</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>contract_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="18" parent="9" name="fk30a7xvb7sjdo33wy0uhpkxpfy">
+      <ObjectId>16902</ObjectId>
+      <ColNames>product_id</ColNames>
+      <RefTableName>product</RefTableName>
+      <RefKeyName>product_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="19" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1087</StateNumber>
+    </column>
+    <column id="20" parent="10" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1087</StateNumber>
+    </column>
+    <column id="21" parent="10" name="type">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1087</StateNumber>
+    </column>
+    <index id="22" parent="10" name="product_pkey">
+      <ObjectId>16892</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="10" name="product_pkey">
+      <ObjectId>16893</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>product_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1088</StateNumber>
+    </column>
+    <column id="25" parent="11" name="amount">
+      <Position>2</Position>
+      <DataType>bytea|0</DataType>
+      <StateNumber>1088</StateNumber>
+    </column>
+    <column id="26" parent="11" name="date">
+      <Position>3</Position>
+      <DataType>bytea|0</DataType>
+      <StateNumber>1088</StateNumber>
+    </column>
+    <index id="27" parent="11" name="revenuerecognition_pkey">
+      <ObjectId>16900</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="28" parent="11" name="revenuerecognition_pkey">
+      <ObjectId>16901</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>revenuerecognition_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
